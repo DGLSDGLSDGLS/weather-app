@@ -1,0 +1,133 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(135deg, #484209, #3e3b05); /* Dual gradient dark background */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Main Container (Card) */
+.app {
+  text-align: center;
+  backdrop-filter: blur(15px);
+  background: rgba(117, 126, 73, 0.8); /* Dark semi-transparent background */
+  border-radius: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  width: 100%; /* Larger width for desktop */
+  max-width: 900px; /* Ensure max width for larger screens */
+  padding: 90px;
+  color: #e0e0e0;
+  transition: all 0.3s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Search Bar */
+.search {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.search input {
+  width: 70%;
+  padding: 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 25px 0 0 25px;
+  outline: none;
+  background-color: #322d10;
+  color: white;
+}
+
+.search button {
+  padding: 20px 25px;
+  font-size: 18px;
+  border: none;
+  background: linear-gradient(135deg, #65630a, #535a08); /* Gradient button */
+  color: white;
+  cursor: pointer;
+  border-radius: 0 25px 25px 0;
+  transition: background 0.3s ease;
+}
+
+.search button:hover {
+  background: linear-gradient(135deg, #005bb5, #004080);
+}
+
+/* Weather Details */
+.weather img.weather-icon {
+  width: 170px; /* Bigger icon */
+  margin: 20px auto;
+}
+
+.temp {
+  font-size: 80px; /* Larger font size for temperature */
+  font-weight: bold;
+  color: #f8f8f2;
+}
+
+.cityname {
+  font-size: 48px; /* Bigger city name */
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.condition {
+  font-size: 24px;
+  text-transform: capitalize;
+  color: #cfcfcf;
+}
+
+/* Weather Info Details */
+.details {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  color: #dcdcdc;
+}
+
+.details .col {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.details .col img {
+  width: 40px;
+}
+
+.details p {
+  margin: 0;
+  font-size: 20px; /* Larger font size */
+}
+
+/* Error Message */
+.error {
+  color: #ff5555;
+  font-size: 20px;
+  margin-top: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
